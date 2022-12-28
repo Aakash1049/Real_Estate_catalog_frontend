@@ -10,6 +10,10 @@ export default function Content(){
               <input id="search" type="search" placeholder="Search PPD ID" name="search"    />           
               <button id="btn">+ Add Property</button>
              
+
+
+
+             
                 {/* <ul className="ul"> */}
                     {/* <li className="list-item">PPD ID</li>
                     <li className="list-item">Image</li>
