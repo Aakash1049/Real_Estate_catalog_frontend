@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Component/Dashboard/SideBar";
-import "../Forms/Basicinfo.css"
+import "../Forms/Basicinfo.css";
+import PropertyNavigation from "../Component/PropertyNavigation/PropertyNavigation";
 
 // Header
 
