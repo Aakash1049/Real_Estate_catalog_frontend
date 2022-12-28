@@ -17,7 +17,9 @@ function App() {
         {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
         <Route path='/SideBar' element={<SideBar/>}/>
         <Route path='/Content' element={<Content/>}/>
-        
+        <Route path='/generalInfo' element={<GeneralInfo/>}/>
+        <Route path='/locationInfo' element={<LocationInfo/>}/>
+
       </Routes>
       </BrowserRouter>
     
