@@ -51,3 +51,16 @@ h4 {
     justify-content: space-evenly;
     width: 30%;
 }
+
+button{
+    background-color:#6AB4F8;
+    padding: 10px 15px;
+    border:1px solid #6AB4F8;
+    border-radius: 25px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.buttons{
+    margin-left: 40%;
+}

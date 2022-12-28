@@ -85,9 +85,18 @@ const Basic = () => {
     
     
                     </div>
-    
-    
+
+
                 </div>
+                <div className="buttons">
+                <button> Cancel</button>
+                <button> Save & Continue</button>
+                
+                
+                
+                </div>
+                
+              
             </form>
     
         </div>
