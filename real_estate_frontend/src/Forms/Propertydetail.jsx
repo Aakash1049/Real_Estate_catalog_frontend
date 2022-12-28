@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Component/Dashboard/SideBar";
+import PropertyNavigation from "../Component/PropertyNavigation/PropertyNavigation";
 import "../Forms/Propertydetail.css"
 
 // Header
@@ -16,7 +17,7 @@ const PropertyDetails = () => {
     return (
         <div>
             <Sidebar/>
-
+            <PropertyNavigation/>
             <form action="" className="form-basic">
 
 
