@@ -1,0 +1,46 @@
+.locationInfo{
+    margin-top: 17%;
+    margin-left: 35%;
+    border: 1px solid white;
+    max-width: fit-content;
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-align: start;
+}
+.locationInfo div{
+    margin: 5px 10px;
+}
+.locationInfo label{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: start;
+    color: #7D7D7D;
+}
+.locationInfo input{
+    width: 95%;
+    border:1px solid #7D7D7D;
+    border-radius: 5px;
+    height: 30px;
+}
+/* .locationInfo #postedBy{
+    height: 35px;
+} */
+.locationInfo .a{
+    display: grid;
+    grid-template-columns: 430px 430px
+}
+
+.locationInfo button{
+    background-color:#6AB4F8;
+    padding: 10px 15px;
+    border:1px solid #6AB4F8;
+    border-radius: 25px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.locationInfo .buttons{
+    margin-left: 40%;
+}

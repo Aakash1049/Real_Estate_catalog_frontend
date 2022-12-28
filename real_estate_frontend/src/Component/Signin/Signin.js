@@ -27,7 +27,7 @@ export default function Signin()
             </div> 
           
             <div className='btn'>
-                <button id="bt">Sign in</button>
+               <button id="bt">Sign in</button>
             </div>
             <Link to="/Signup" ><a href="Signup.js" >Sign Up</a></Link>
           </div>
