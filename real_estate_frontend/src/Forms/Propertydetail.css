@@ -1,59 +1,65 @@
-.form-basicinfo{
+.form-basic{
     background-color: #F5F5F5;
     margin-top: -27%;
     margin-left: 17%;
-}
-
-.form-basicinfo .form {
-    
-    display: flex;
-    
     justify-content: space-between;
 }
 
 
-
-
-.form-basicinfo .form-container1 {
-    margin: 2%;
+.form-basic .form{
+    display: flex;
+    margin-top: -27%;
     margin-left: 5%;
-    padding: 1%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 30%;
-
+    justify-content: space-between;
     
+   
+   
 }
 
-.form-basicinfo .input {
+.form-basic .input {
+    /* display: flex; */
     width: 50vh;
-    height: 5vh;
+    height: 6vh;
 
     border: 1px solid #C3C3C3;
     border-radius: 8px;
 }
 
 
+.form-basic .form-container1 {
+    margin: 2%;
+    padding: 1%;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
 
-.form-basicinfo h3 {
+    
+}
+
+
+.form-basic h3 {
     margin: 3%;
     padding: 1%;
     text-align: left;
     font-size: 22px;
+    
 }
 
 
 
-.form-basicinfo .form-container2 {
+.form-basic .form-container2 {
     margin: 2%;
-
+    margin-left: 20%;
     padding: 1%;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 30%;
+    width: 100%;
+
 }
 
-.form-basicinfo button{
+.form-basic button{
     background-color:#6AB4F8;
     padding: 10px 15px;
     border:1px solid #6AB4F8;
@@ -61,7 +67,8 @@
     color: white;
     margin-right: 10px; 
     margin-top: 25px;
+    
 }
-.form-basicinfo .buttons{
+.form-basic .buttons{
     margin-left: 0%;
 }

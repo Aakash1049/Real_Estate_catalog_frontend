@@ -1,0 +1,38 @@
+.Propertynavigation{
+    position: absolute;
+    padding: 0;
+    margin-top: -500px;
+    margin-left: 300px;
+    background-color: white;
+    min-width: 78vw;
+    border-radius: 55px;
+    max-height: 60px;
+    padding-top: 0;
+}
+.Propertynavigation h3{
+    position: absolute;
+    margin-top: -30px;
+}
+.Propertynavigation ul{
+    display: flex;
+    justify-content: space-around;
+}
+.Propertynavigation li span{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    margin-top: -5px;
+    margin-right: 15px;
+    background-color: #E1F9F4;
+}
+.Propertynavigation li{
+    list-style: none;
+    margin-top: -15px;
+    padding: 10px 10px;
+}
+.Propertynavigation li:hover{
+    background-color: #6AB4F8;
+    border-radius: 30px;
+    min-height: 34px;
+    cursor: pointer;
+}

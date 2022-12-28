@@ -2,7 +2,7 @@ import React from "react";
 import "../Dashboard/DashBoardContent.css"
 import SideBar from "./SideBar";
 
-export default function Content(){
+export default function Content() {
     return (
         <>
         <SideBar/>
@@ -11,11 +11,8 @@ export default function Content(){
               <button id="btn">+ Add Property</button>
              
 
-
-
-             
-                {/* <ul className="ul"> */}
-                    {/* <li className="list-item">PPD ID</li>
+                <ul className="ul">
+                    <li className="list-item">PPD ID</li>
                     <li className="list-item">Image</li>
                     <li className="list-item">Property</li>
                     <li className="list-item">Contact</li>
@@ -24,8 +21,8 @@ export default function Content(){
                     <li className="list-item">Status</li>
                     <li className="list-item">DayLift</li>
                     <li className="list-item">Action</li>
-                </ul> */}
-               </div>
+                </ul>
+            </div>
         </>
     )
 }
