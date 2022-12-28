@@ -1,8 +1,14 @@
 import React from 'react'
 import "./locationInfo.css"
+import SideBar from '../Dashboard/SideBar'
 const LocationInfo = () => {
+    
+
+
+
     return (
         <>
+                <SideBar />
 
             <form className='locationInfo'>
                 <div className='a'>

@@ -1,6 +1,6 @@
 .generalInfo{
-    margin-top: 17%;
-    margin-left: 35%;
+    margin-top: -400px;
+    margin-left: 250px;
     border: 1px solid white;
     max-width: fit-content;
     background-color: white;
@@ -9,7 +9,7 @@
     text-align: start;
 }
 .generalInfo div{
-    margin: 5px 10px;
+    margin: 12px 12px;
 }
 .generalInfo label{
     font-weight: 600;
@@ -29,7 +29,7 @@
 }
 .generalInfo .a{
     display: grid;
-    grid-template-columns: 430px 430px
+    grid-template-columns: 600px 600px;
 }
 .generalInfo input[type="file"]{
     display: none;
