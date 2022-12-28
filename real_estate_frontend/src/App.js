@@ -9,8 +9,7 @@ import GeneralInfo from './Component/General Info/generalInfo'
 import LocationInfo from './Component/locationInfo/locationInfo'
 import Basic from "./Forms/Basicinfo"
 import PropertyDetails from "./Forms/Propertydetail"
-import GeneralInfo from './Component/General Info/generalInfo';
-import LocationInfo from './Component/locationInfo/locationInfo';
+
 
 function App() {
   return (
