@@ -7,7 +7,7 @@ export default function Content(){
         <>
         <SideBar/>
          <div className="content">
-              <input id="search" type="search" placeholder="Search PPD ID" name="search"    />           
+              <input id="search" type="text" placeholder="Search PPD ID" name="search"    />           
               <button id="btn">+ Add Property</button>
              
 

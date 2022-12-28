@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signin from './Component/Signin/Signin';
 import SideBar from './Component/Dashboard/SideBar';
 import Content from './Component/Dashboard/DashboardContent';
+import GeneralInfo from './Component/General Info/generalInfo'
+import LocationInfo from './Component/locationInfo/locationInfo'
 
 function App() {
   return (
