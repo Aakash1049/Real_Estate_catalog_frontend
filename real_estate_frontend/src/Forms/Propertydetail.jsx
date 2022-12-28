@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Component/Dashboard/SideBar";
-import Basicinfo from "../Forms/Basicinfo.css";
+import "../Forms/Propertydetail.css"
 
 // Header
 
@@ -15,7 +15,7 @@ const PropertyDetails = () => {
 
     return (
         <div>
-            {/* <Sidebar/> */}
+            <Sidebar/>
 
             <form action="" className="form-basic">
 
@@ -79,8 +79,8 @@ const PropertyDetails = () => {
 
 
                     <div className="form-container2">
-                        <h3>Breath</h3>
-                        <input type="text" id="breath" Placeholder="Example:1000" className="input">
+                        <h3>Breadth</h3>
+                        <input type="text" id="breadth" Placeholder="Example:1000" className="input">
 
                         </input>
 
@@ -140,15 +140,16 @@ const PropertyDetails = () => {
 
 
                 </div>
-                
+
                 <div className="buttons">
-                <button> Cancel</button>
+                <button> Previous</button>
                 <button> Save & Continue</button>
                 </div>
-
+                
 
 
             </form>
+            
 
         </div>
 
@@ -158,4 +159,4 @@ const PropertyDetails = () => {
 }
 
 
-export default Basic;
+export default PropertyDetails;

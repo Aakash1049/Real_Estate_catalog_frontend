@@ -1,12 +1,31 @@
-.form {
+.form-basicinfo{
+    background-color: #F5F5F5;
+    margin-top: -35%;
+    margin-left: 17%;
+}
+
+.form-basicinfo .form {
+    
     display: flex;
-    margin: 2%;
-    padding: 2%;
-    margin-right: 25%;
+    
     justify-content: space-between;
 }
 
-.input {
+
+
+
+.form-basicinfo .form-container1 {
+    margin: 2%;
+    margin-left: 5%;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+
+    
+}
+
+.form-basicinfo .input {
     width: 50vh;
     height: 5vh;
 
@@ -14,53 +33,35 @@
     border-radius: 8px;
 }
 
-.form-container {
-    margin: 10%;
-    margin-left: 10%;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 70%;
-}
-
-.form-container1 {
-    margin: 5%;
-
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 30%;
-}
 
 
-h4 {
+.form-basicinfo h3 {
     margin: 3%;
     padding: 1%;
+    text-align: left;
+    font-size: 22px;
 }
 
 
 
-.form-container2 {
-    margin: 5%;
+.form-basicinfo .form-container2 {
+    margin: 2%;
 
     padding: 1%;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 30%;
 }
 
-button{
+.form-basicinfo button{
     background-color:#6AB4F8;
     padding: 10px 15px;
     border:1px solid #6AB4F8;
     border-radius: 25px;
     color: white;
-    margin-right: 10px;
+    margin-right: 10px; 
     margin-top: 25px;
 }
-.buttons{
-    margin-left: 40%;
+.form-basicinfo .buttons{
+    margin-left: 0%;
 }

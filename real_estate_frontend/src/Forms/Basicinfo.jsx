@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Component/Dashboard/SideBar";
-import Basicinfo from "../Forms/Basicinfo.css";
+import "../Forms/Basicinfo.css"
 
 // Header
 
@@ -15,9 +15,9 @@ const Basic = () => {
 
     return (
         <div>
-            {/* <Sidebar/> */}
+            <Sidebar/>
     
-            <form action="" className="form-basic">
+            <form action="" className="form-basicinfo">
     
     
                 <div className="form">
@@ -91,9 +91,6 @@ const Basic = () => {
                 <div className="buttons">
                 <button> Cancel</button>
                 <button> Save & Continue</button>
-                
-                
-                
                 </div>
                 
               
