@@ -1,15 +1,16 @@
 .locationInfo{
-    margin-top: 17%;
-    margin-left: 35%;
+    margin-top: -400px;
+    margin-left: 250px;
     border: 1px solid white;
     max-width: fit-content;
     background-color: white;
     padding: 20px 20px;
     border-radius: 5px;
     text-align: start;
+    overflow: hidden;
 }
 .locationInfo div{
-    margin: 5px 10px;
+    margin: 12px 12px;
 }
 .locationInfo label{
     font-weight: 600;
@@ -29,7 +30,8 @@
 } */
 .locationInfo .a{
     display: grid;
-    grid-template-columns: 430px 430px
+    grid-template-columns: 600px 600px;
+
 }
 
 .locationInfo button{

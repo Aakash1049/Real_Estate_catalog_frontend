@@ -84,7 +84,8 @@ li{
     flex-direction: row;
     margin-left: 1px;
     height: 50px;
-    position: relative;
+    position: absolute;
+    margin-top: 125px;
 }
 
 .list-item

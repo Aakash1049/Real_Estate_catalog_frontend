@@ -6,9 +6,6 @@ import Signin from './Component/Signin/Signin';
 import SideBar from './Component/Dashboard/SideBar';
 import GeneralInfo from './Component/General Info/generalInfo';
 import LocationInfo from './Component/locationInfo/locationInfo';
-import Content from "./Component/Dashboard/DashboardContent";
-import Basic from "./Forms/Basicinfo";
-import PropertyDetails from './Forms/Propertydetail';
 
 function App() {
   return (
