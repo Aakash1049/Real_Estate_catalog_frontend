@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import SideBar from '../Dashboard/SideBar'
+import PropertyNavigation from '../PropertyNavigation/PropertyNavigation'
 import "./generalInfo.css"
 const GeneralInfo = () => {
     const [name, setName] = useState("")
@@ -13,6 +14,7 @@ const GeneralInfo = () => {
     return (
         <>
             <SideBar/>
+            <PropertyNavigation/>
             <form className='generalInfo'>
                 <div className='a'>
                     <div>

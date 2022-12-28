@@ -1,6 +1,7 @@
 import React from 'react'
 import "./locationInfo.css"
 import SideBar from '../Dashboard/SideBar'
+import PropertyNavigation from '../PropertyNavigation/PropertyNavigation'
 const LocationInfo = () => {
     
 
@@ -9,7 +10,7 @@ const LocationInfo = () => {
     return (
         <>
                 <SideBar />
-
+                <PropertyNavigation/>
             <form className='locationInfo'>
                 <div className='a'>
                     <div>
