@@ -9,22 +9,40 @@ import GeneralInfo from './Component/General Info/generalInfo'
 import LocationInfo from './Component/locationInfo/locationInfo'
 import Basic from "./Forms/Basicinfo"
 import PropertyDetails from "./Forms/Propertydetail"
+import { useState } from 'react';
 
 
 function App() {
+  const [user, setUser]= useState({
+    // UserID: localStorage.getItem("UserID"),
+    // UserName: localStorage.getItem("UserName"),
+    jwt:localStorage.getItem("jwt"),
+    user:localStorage.getItem("user"),
+
+  });
+  
+  
+  const [data, setData] = useState({
+    PPID: "NA",
+    Property: "NA",
+    Area: "na",
+    Contact: "na",
+    Views: "na",
+    Days: "na",
+  });
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Signin/>}/>
+        <Route path='/' element={<Signin setUser={setUser}/>}/>
         <Route path='/Signup' element={<Signup/>}/>
         {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
         <Route path='/SideBar' element={<SideBar/>}/>
-        <Route path='/Content' element={<Content/>}/>
-        <Route path='/generalInfo' element={<GeneralInfo/>}/>
-        <Route path='/locationInfo' element={<LocationInfo/>}/>
-        <Route path='/Basicinfo' element={<Basic/>}/>
-        <Route path='/Propertydetail' element={<PropertyDetails/>}/>
+        <Route path='/Content' element={<Content user={user}/>}/>
+        <Route path='/generalInfo' element={<GeneralInfo  user={user} data={data} setData={setData} />}/>
+        <Route path='/locationInfo' element={<LocationInfo user={user} data={data} setData={setData}/>}/>
+        <Route path='/Basicinfo' element={<Basic user={user} data={data} setData={setData}/>}/>
+        <Route path='/Propertydetail' element={<PropertyDetails user={user} data={data} setData={setData}/>}/>
 
 
       </Routes>

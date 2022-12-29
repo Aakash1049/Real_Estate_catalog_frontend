@@ -2,24 +2,73 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Component/Dashboard/SideBar";
 import PropertyNavigation from "../Component/PropertyNavigation/PropertyNavigation";
-import "../Forms/Propertydetail.css"
+import "../Forms/Propertydetail.css";
+import { useNavigate } from "react-router-dom";
 
 // Header
 
-const PropertyDetails = () => {
+const PropertyDetails = ({ user, data, setData }) => {
     const [length, setLength] = useState("");
     const [breadth, setBreadth] = useState("");
     const [totalArea, setTotalArea] = useState("");
     const [areaUnit, setAreaUnit] = useState("");
-    const [bhk, setbhk] = useState("");
-    const [floors, setFloors] = useState("");
-    const [attached, setAttached]=useState("");
-    const [western, setWestern]=useState("");
-    const [furnished, setFurnished] = useState("");
-    const [lifts, setLifts]=useState("");
-    const [parking, setParking]=useState("");
-    const [facing, setFacing]=useState("");
-    const [electricity, setElectricity]=useState("");
+    const [bhk, setbhk] = useState("1");
+    const [floors, setFloors] = useState("Ground");
+    const [attached, setAttached]=useState("Yes");
+    const [western, setWestern]=useState("Yes");
+    const [furnished, setFurnished] = useState("Fully Furnished");
+    const [lifts, setLifts]=useState("Yes");
+    const [parking, setParking]=useState("Yes");
+    const [facing, setFacing]=useState("East");
+    const [electricity, setElectricity]=useState("1 Phase");
+    const navigate =useNavigate();
+
+    // console.log(user, "From Basic Page");
+    // console.log(data);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // console.log("Handle Submit Called");
+        try {
+            
+            // const PPID = parseInt(Math.random() * 10000);
+            // const Views = parseInt(Math.random() * 10);
+            // const Days = parseInt(Math.random() * 100);
+            // let ppi = PPID.toString();
+            // ppi = "PPID" + ppi;
+            setData(
+                {
+                    ...data,
+                    length,
+                    breadth,
+                    totalArea,
+                    areaUnit,
+                    bhk,
+                    floors,
+                    attached,
+                    western,
+                    furnished,
+                    lifts,
+                    parking,
+                    facing,
+                    electricity
+                }
+            )
+            console.log(data, user);
+            navigate('/generalInfo')
+
+        }
+        catch (error) {
+            alert(error.message, error)
+        }
+
+
+
+    }
+
+
+
+
     return (
         <div>
             <Sidebar/>
@@ -142,7 +191,7 @@ const PropertyDetails = () => {
 
                 <div className="buttons">
                 <button> Previous</button>
-                <button> Save & Continue</button>
+                <button onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
                 </div>
                 
 
