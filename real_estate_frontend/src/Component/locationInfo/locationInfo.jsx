@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 const LocationInfo = ({ user, data, setData }) => {
     const [email,setEmail]=useState("")
-    const [city,,setCity]=useState("")
+    const [city,setCity]=useState("")
     const [area,setArea]=useState("")
     const [pincode, setPincode]=useState();
     const [address,setAdress]=useState("");
@@ -18,6 +18,7 @@ const LocationInfo = ({ user, data, setData }) => {
     const navigate =useNavigate();
 
     useEffect(()=>{
+        if(!data.email) return
 
         fetch("/addProperty", {
             method: "POST",
@@ -36,7 +37,7 @@ const LocationInfo = ({ user, data, setData }) => {
                 else {
                    
                     alert(data.message)
-                    // navigate("/Content")
+                    navigate("/Content")
                 }
             })
 
@@ -44,6 +45,10 @@ const LocationInfo = ({ user, data, setData }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if(!email || !city || !area || !pincode || !address || !lattitude || !longitude){
+            alert("all fields are mandatory")
+            return
+        }
         // console.log("Handle Submit Called");
         try {
             

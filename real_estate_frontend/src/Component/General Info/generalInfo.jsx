@@ -86,8 +86,8 @@ const GeneralInfo = ({ user, data, setData }) => {
                         <br />
                         <select id="postedBy" value={saleType} onChange={(e) => setSaleType(e.target.value)}>
                             <option>Select</option>
-                            <option value="sold">Sold</option>
-                            <option value="unsold">unsold</option>
+                            <option value="Sold">Sold</option>
+                            <option value="Unsold">unsold</option>
                         </select> <br />
                     </div>
 
