@@ -1,14 +1,16 @@
 import React from "react";
 import "../Dashboard/DashBoardContent.css"
 import SideBar from "./SideBar";
+import { useNavigate } from "react-router-dom";
 
 export default function Content() {
+    const navigate =useNavigate()
     return (
         <>
         <SideBar/>
          <div className="content">
               <input id="search" type="text" placeholder="Search PPD ID" name="search"    />           
-              <button id="btn" >+ Add Property</button>
+              <button id="btn">+ Add Property</button>
              
 
                 <ul className="ul">
