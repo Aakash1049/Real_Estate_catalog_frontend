@@ -41,7 +41,7 @@ const PropertyDetails = () => {
 
                         <h3>No of BHK</h3>
                         <select className="input" id="bhk" placeholder="Select No of BHK" value={bhk} onChange={(e) => setbhk(e.target.value)}>
-                            <option> Select No of BHK</option>
+                            {/* <option> Select No of BHK</option> */}
                             <option >1</option>
                             <option >2</option>
                             <option >3</option>

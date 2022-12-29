@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Dashboard/DashBoardContent.css"
 import SideBar from "./SideBar";
 import { useNavigate } from "react-router-dom";
 
 export default function Content() {
-    const navigate =useNavigate()
+    const navigate =useNavigate();
     return (
         <>
         <SideBar/>
