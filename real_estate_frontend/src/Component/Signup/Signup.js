@@ -36,44 +36,23 @@ export default function Signup() {
     return (
         <>
             <form>
-                <div className='main'>
-                    <section className='logo'>
-                        <h1>Logo</h1>
-                    </section>
-                    <h2>Create  New Account</h2>
-
-        <div className='email'>
-            <input id="em" type="email"  placeholder='Mail Id' name='email'/>
-            </div>  
-            <div className='pwd'>
-            <input  id="pw" type="password"  placeholder="password"  name='password'/>
-            </div> 
-            <div className=' con-pwd'>
-            <input  id="con-pw" type="password"  placeholder=" Confirm password"  name=' confirm password'/>
-            </div> 
-          
-            <div className='btn'>
-                <button id="bt" onClick={SignUpHandler}>Sign Up</button>
+            <div className='email'>
+                <input id="em" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Mail Id' name='email' />
             </div>
-          </div>
-          <Link to="/">Sign in</Link> 
-          </form>
-                    <div className='email'>
-                        <input id="em" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Mail Id' name='email' />
-                    </div>
-                    <div className='pwd'>
-                        <input id="pw" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password" name='password' />
-                    </div>
-                    <div className=' con-pwd'>
-                        <input id="con-pw" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder=" Confirm password" name=' confirm password' />
-                    </div>
+            <div className='pwd'>
+                <input id="pw" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password" name='password' />
+            </div>
+            <div className=' con-pwd'>
+                <input id="con-pw" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder=" Confirm password" name=' confirm password' />
+            </div>
 
-                    <div className='btn'>
-                        <button id="bt" onClick={(e) => SignUpHandler(e)}>Sign Up</button>
-                    </div>
-             
-                <Link to="/">Sign in</Link>
-            </form>
+            <div className='btn'>
+                <button id="bt" onClick={(e) => SignUpHandler(e)}>Sign Up</button>
+            </div>
+
+            <Link to="/">Sign in</Link>
+           </form>
+       
         </>
     )
 }
