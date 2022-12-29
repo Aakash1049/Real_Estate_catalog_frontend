@@ -71,7 +71,7 @@ export default function Signup() {
                     <div className='btn'>
                         <button id="bt" onClick={(e) => SignUpHandler(e)}>Sign Up</button>
                     </div>
-                </div>
+             
                 <Link to="/">Sign in</Link>
             </form>
         </>
