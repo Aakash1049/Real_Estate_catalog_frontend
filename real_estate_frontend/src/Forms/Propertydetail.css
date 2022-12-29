@@ -29,7 +29,7 @@
 .form-basic .form-container1 {
     margin: 2%;
     padding: 1%;
-    display: grid;
+    /* display: grid; */
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
@@ -50,9 +50,8 @@
 
 .form-basic .form-container2 {
     margin: 2%;
-    margin-left: 20%;
     padding: 1%;
-    display: flex;
+    /* display: grid; */
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;

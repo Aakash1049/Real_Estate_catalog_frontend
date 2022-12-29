@@ -5,10 +5,11 @@ import SideBar from "./SideBar";
 export default function Content() {
     return (
         <>
-            <SideBar />
-            <div className="content">
-                <input id="search" type="text" placeholder="Search PPD ID" name="search" />
-                <button id="btn">+ Add Property</button>
+        <SideBar/>
+         <div className="content">
+              <input id="search" type="text" placeholder="Search PPD ID" name="search"    />           
+              <button id="btn">+ Add Property</button>
+             
 
                 <ul className="ul">
                     <li className="list-item">PPD ID</li>
