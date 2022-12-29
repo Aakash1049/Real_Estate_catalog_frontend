@@ -26,7 +26,7 @@ const Basic = () => {
                     <div className="form-container1">
                         <h3>Property Type</h3>
                         <select className="input" id="Property" required placeholder="Select Property Type">
-                            <option>Select Property Type</option>
+                            <option selected disabled hidden>Select Property Type</option>
                             <option>Home </option>
                             <option>Plot </option>
                             <option>Flat </option>
