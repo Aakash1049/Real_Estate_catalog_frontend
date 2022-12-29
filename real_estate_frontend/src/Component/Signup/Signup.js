@@ -56,7 +56,7 @@ export default function Signup() {
                 <button id="bt" onClick={SignUpHandler}>Sign Up</button>
             </div>
           </div>
-          <Link to="/"><a href="Signin.js" >Sign in</a></Link> 
+          <Link to="/">Sign in</Link> 
           </form>
         </>
     )
