@@ -26,13 +26,13 @@ const SignUpHandler = ()=>{
         <h2>Create  New Account</h2> 
 
         <div className='email'>
-            <input id="em" type="email"  placeholder='Mail Id' name='email'/>
+            <input id="em" type="email"  placeholder='Mail Id' name='email' value={email}  onChange={}/>
             </div>  
             <div className='pwd'>
-            <input  id="pw" type="password"  placeholder="password"  name='password'/>
+            <input  id="pw" type="password"  placeholder="password"  name='password' value={password}  />
             </div> 
             <div className=' con-pwd'>
-            <input  id="con-pw" type="password"  placeholder=" Confirm password"  name=' confirm password'/>
+            <input  id="con-pw" type="password"  placeholder=" Confirm password"  name=' confirm password' value={confirmPassword} />
             </div> 
           
             <div className='btn'>
