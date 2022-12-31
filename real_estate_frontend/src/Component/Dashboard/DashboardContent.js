@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Content() {
     const navigate =useNavigate();
     const [properties,setProperties]=useState([])
+
     useEffect(()=>{
         fetch("/getAllProperties",{
             method:"GET",
@@ -19,6 +20,26 @@ export default function Content() {
             
         })
     },[])
+
+const toggleAndSave =(e)=>{
+
+console.log(e.target.value)
+
+let buttonupdate = e.target.value.split(",")
+
+let Update = {
+    saleType :"Unsold",
+    Days:0
+}
+
+    if(buttonupdate[0]==="Unsold"){
+       Update.saleType = "Sold"
+       Update.Days =parseInt(Math.random() * 10)
+    }
+    console.log( Update.saleType)
+}
+
+
 
     return (
         <>
@@ -66,7 +87,7 @@ export default function Content() {
                                     <li className="list-item">{property.mobile}</li>
                                     <li className="list-item">{property.area}</li>
                                     <li className="list-item">{property.Views}</li>
-                                    <li className="list-item">{property.saleType}</li>
+                                    <li className="list-item"><button onClick={toggleAndSave} value={[property._id,property.saleType]}>{property.saleType}</button></li>
                                     <li className="list-item">{property.Days}</li>
                                     <li className="list-item">v/e</li>
                                 </>
