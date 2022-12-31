@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
 
 const EachProperty = ({ property }) => {
 
     const [view, setView] = useState(false)
+    const [showImage, setShowImage]=useState(false)
     const saletypeHandler = (e, PPDID) => {
         console.log(e.target.value)
         e.preventDefault()
@@ -25,7 +27,20 @@ const EachProperty = ({ property }) => {
 
             <tr className="table-data">
                 <td>{property.PPDID}</td>
-                <td><i class="fa-regular fa-images"></i></td>
+                <td><i class="fa-regular fa-images" onClick={()=>setShowImage(!showImage)}></i></td>
+                {
+                    showImage?
+                    Swal.fire({
+                        imageUrl: property.photo,
+                        imageHeight: 300,
+                        imageWidth:300,
+                        imageAlt: 'image'
+                         
+                      },setShowImage(false))
+                      
+                      :
+                      ""
+                }
                 <td>{property.propertyType}</td>
                 <td>{property.mobile}</td>
                 <td>{property.totalArea}</td>
@@ -36,11 +51,13 @@ const EachProperty = ({ property }) => {
 
             </tr>
             {view ?
-                <div className="view">
-                    <span >Name: {property.name}</span>&nbsp;
-                    <span>email: {property.email}</span>&nbsp;
-                    <span >city: {property.city}</span>&nbsp;
-                </div>
+                Swal.fire({
+                    title: "<b>More Info</b>", 
+                    html: `<b>Name</b>: ${property.name}</br>
+                            <b>Email</b>: ${property.email}</br>
+                            <b>City</b>: ${property.city}</br>`,  
+                    confirmButtonText: "<b>Close</b>", 
+                  },setView(false))
 
                 : ""
             }

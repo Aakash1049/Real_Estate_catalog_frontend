@@ -1,5 +1,5 @@
 import React from "react";
-import { json } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import "../Dashboard/SideBar.css"
 
 export default function SideBar() {
@@ -7,6 +7,13 @@ export default function SideBar() {
     console.log(user.email)
     const username = user.email.split("@")[0]
     console.log(username)
+    const navigate=useNavigate()
+
+    const logOutHandler=()=>{
+        console.log("logout called")
+        localStorage.clear()
+        navigate("/")
+    }
 
     return (
         <>
@@ -34,9 +41,9 @@ export default function SideBar() {
                         <section>
                             <img id="img-2" src={require("../../Images/person.png")} alt="logo" />
                             {/* <h4 className="username">{username}</h4> */}
-                            <select className="username">
+                            <select className="username" onChange={()=>logOutHandler()}>
                                 <option className="username" selected disabled hidden>{username}</option>
-                                <option>Logout </option>
+                                <option>Logout</option>
                             </select>
                         </section>
                     </nav>
