@@ -27,8 +27,8 @@ function App() {
     Property: "NA",
     Area: "na",
     Contact: "na",
-    Views: "na",
-    Days: "na",
+    Views: 0,
+    Days: 0,
   });
   return (
     <div className="App">
