@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import "../Dashboard/DashBoardContent.css"
 import SideBar from "./SideBar";
 import { useNavigate } from "react-router-dom";
+import EachProperty from "./EachProperty";
 
 export default function Content() {
     const navigate = useNavigate();
     const [properties, setProperties] = useState([])
     const [serachResults, setSearchResults] = useState([])
     const [searchText, setSearchtext] = useState("")
+<<<<<<< HEAD
     const [view, setView] = useState(false)
+=======
+
+>>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
     useEffect(() => {
         fetch("/getAllProperties", {
             method: "GET",
@@ -23,6 +28,7 @@ export default function Content() {
             })
     }, [properties])
 
+<<<<<<< HEAD
     const saletypeHandler = (e, PPDID) => {
         console.log(e.target.value)
         e.preventDefault()
@@ -38,6 +44,8 @@ export default function Content() {
 
 
     }
+=======
+>>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
 
 
 
@@ -69,13 +77,21 @@ export default function Content() {
 
 
                     <tr className="table">
+<<<<<<< HEAD
                         <td >PPD ID</td>
+=======
+                        <td className="table-ppd">PPD ID</td>
+>>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                         <td>Image</td>
                         <td>Property</td>
                         <td>Contact</td>
                         <td>Area</td>
                         <td>Views</td>
+<<<<<<< HEAD
                         <td >Status</td>
+=======
+                        <td>Status</td>
+>>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                         <td>Days Left</td>
                         <td>Action</td>
                     </tr>
@@ -86,6 +102,7 @@ export default function Content() {
                             properties.map((property) => {
                                 console.log(property)
                                 return (
+<<<<<<< HEAD
                                     <>
 
 
@@ -147,6 +164,21 @@ export default function Content() {
                     }
 
 
+=======
+                                    <EachProperty property={property} />
+                                )
+                            })
+                            :
+                            serachResults.map((property) => {
+                                console.log(property)
+                                return (
+                                    <EachProperty property={property} />
+                                )
+                            })
+                    }
+
+
+>>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                 </table>
             </div>
         </>
