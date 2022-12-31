@@ -146,7 +146,7 @@ const LocationInfo = ({ user, data, setData }) => {
                 </div>
                 <div className="buttons">
                 
-                <button>Previous</button>
+                <button onClick={()=>navigate("/generalInfo")}>Previous</button>
                 <button onClick={(e)=>handleSubmit(e)}>Add Property</button>
                 </div>
             

@@ -101,7 +101,7 @@ const GeneralInfo = ({ user, data, setData }) => {
                         <select id="postedBy" value={saleType} onChange={(e) => setSaleType(e.target.value)}>
                             <option>Select</option>
                             <option value="Sold">Sold</option>
-                            <option value="Unsold">unsold</option>
+                            <option value="Unsold">Unsold</option>
                         </select> <br />
                     </div>
 
@@ -125,7 +125,7 @@ const GeneralInfo = ({ user, data, setData }) => {
                 </div>
                 <div className="buttons">
 
-                    <button>Previous</button>
+                    <button onClick={()=>navigate("/Propertydetail")}>Previous</button>
                     <button onClick={(e)=>handleSubmit(e)}>Save & Continue</button>
                 </div>
             </form>
