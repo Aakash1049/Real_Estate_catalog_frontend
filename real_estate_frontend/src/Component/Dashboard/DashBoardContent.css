@@ -144,3 +144,8 @@ table{
     padding-left: 70px;
     color: rgb(104, 104, 110);
 }
+
+#btt-1{
+    background-color: white;
+    border: none;
+}
