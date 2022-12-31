@@ -5,7 +5,9 @@
     background-color: rgb(245, 245, 245);
     position: relative;
     margin-top: -36.13%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    max-width: 100vw;
+
 }
 
 h4{
@@ -24,7 +26,7 @@ h4{
 ul{
    margin-left: 0;
     list-style: none;
-      
+    max-width: fit-content;
 }
 
 
@@ -97,10 +99,11 @@ li{
     background-color: #FFFFFF;
 } */
 table{
-    width: 200vw;
+    /* width: 200vw; */
     /* border-collapse: collapse; */
      border-collapse: separate;    
     border-spacing: 0 8px; 
+
     
 }
 
