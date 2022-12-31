@@ -5,7 +5,8 @@
     background-color: rgb(245, 245, 245);
     position: relative;
     margin-top: -36.13%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    max-width: fit-content;
 }
 
 h4{
