@@ -79,13 +79,56 @@ li{
     
    
 }
-.ul{
+/* .ul{
     display: flex;
     flex-direction: row;
-    margin-left: 1px;
+    margin-left: 50px;
     height: 50px;
     position: absolute;
     margin-top: 125px;
+    border: 2px;
+    padding: 2px;
+    gap: 220px;
+    margin-right: 250px;
+    background-color: #FFFFFF;
+} */
+table{
+    width: 200vw;
+    /* border-collapse: collapse; */
+}
+.table{
+    color: #284E91;
+    
+    background-color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 50px;  
+    /* margin-bottom: 50px; */
+    border-bottom: 50px;
+}
+
+
+
+.table-data{
+    color: #1F1F1F;
+    background-color: #FFFFFF;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 25px; 
+    padding: 20px;
+    
+    
+    
+}
+
+
+
+.table td{
+    padding: 0 15px;
 }
 
 .list-item

@@ -4,31 +4,31 @@ import SideBar from "./SideBar";
 import { useNavigate } from "react-router-dom";
 
 export default function Content() {
-    const navigate =useNavigate();
-    const [properties,setProperties]=useState([])
-    useEffect(()=>{
-        fetch("/getAllProperties",{
-            method:"GET",
-            headers:{
-              "Authorization":"Bearer "+localStorage.getItem("jwt")
+    const navigate = useNavigate();
+    const [properties, setProperties] = useState([])
+    useEffect(() => {
+        fetch("/getAllProperties", {
+            method: "GET",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("jwt")
             }
         })
-        .then(res=>res.json())
-        .then(data=>{
-            setProperties(data)
-            
-        })
-    },[])
+            .then(res => res.json())
+            .then(data => {
+                setProperties(data)
+
+            })
+    }, [])
 
     return (
         <>
-        <SideBar/>
-         <div className="content">
-              <input id="search" type="text" placeholder="Search PPD ID" name="search"    />           
-              <button id="btn" onClick={()=>navigate("/Basicinfo")}>+ Add Property</button>
-            
+            <SideBar />
+            <div className="content">
+                <input id="search" type="text" placeholder="Search PPD ID" name="search" />
+                <button id="btn" onClick={() => navigate("/Basicinfo")}>+ Add Property</button>
 
-                <ul className="ul">
+
+                {/* <ul className="ul">
                     <li className="list-item">PPD ID</li>
                     <li className="list-item">Image</li>
                     <li className="list-item">Property</li>
@@ -38,29 +38,46 @@ export default function Content() {
                     <li className="list-item">Status</li>
                     <li className="list-item">DayLift</li>
                     <li className="list-item">Action</li>
-                </ul>
-                <div className="all-properties">
-                    <ul className="ul">
-                    {
-                        
-                        properties.map((property)=>{
-                            console.log(property)
-                            return(
-                                <>
-                                    {/* <table>
-                                        <tr>
-                                            <td>{property.PPDID}</td>
-                                            <td>Image</td>
-                                            <td>{property.propertyType}</td>
-                                            <td>{property.mobile}</td>
-                                            <td>{property.area}</td>
-                                            <td>{property.Views}</td>
-                                            <td>{property.saleType}</td>
-                                            <td>{property.Days}</td>
-                                            <td>v/e</td>
-                                        </tr>
-                                    </table> */}
-                                    <li className="list-item">{property.PPDID}</li>
+                </ul> */}
+
+                <table >
+
+
+                    <div className="">
+                        <ul className="">
+                        <tr className="table">
+                                <td className="table-ppd">PPD ID</td>
+                                <td>Image</td>
+                                <td>Property</td>
+                                <td>Contact</td>
+                                <td>Area</td>
+                                <td>Views</td>
+                                <td>Status</td>
+                                <td>Days Left</td>
+                                <td>Action</td>
+                            </tr>
+
+                            {
+                               
+                                properties.map((property) => {
+                                    console.log(property)
+                                    return (
+                                        <>
+                                            
+
+                                            <tr className="table-data">
+                                                <td>{property.PPDID}</td>
+                                                <td>Image</td>
+                                                <td>{property.propertyType}</td>
+                                                <td>{property.mobile}</td>
+                                                <td>{property.area}</td>
+                                                <td>{property.Views}</td>
+                                                <td>{property.saleType}</td>
+                                                <td>{property.Days}</td>
+                                                <td>v/e</td>
+                                            </tr>
+
+                                            {/* <li className="list-item">{property.PPDID}</li>
                                     <li className="list-item">Image</li>
                                     <li className="list-item">{property.propertyType}</li>
                                     <li className="list-item">{property.mobile}</li>
@@ -68,13 +85,14 @@ export default function Content() {
                                     <li className="list-item">{property.Views}</li>
                                     <li className="list-item">{property.saleType}</li>
                                     <li className="list-item">{property.Days}</li>
-                                    <li className="list-item">v/e</li>
-                                </>
-                            )
-                        })
-                    }
-                    </ul>
-                </div>
+                                    <li className="list-item">v/e</li> */}
+                                        </>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                </table>
             </div>
         </>
     )
