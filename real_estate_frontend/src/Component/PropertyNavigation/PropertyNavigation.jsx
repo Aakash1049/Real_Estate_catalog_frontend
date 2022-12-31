@@ -11,7 +11,7 @@ const PropertyNavigation = () => {
     </h3>
         <ul>
             <li><span>1</span> Basic Info</li>
-            <li><span>2</span> Propert Detail</li>
+            <li><span>2</span> Property Detail</li>
             <li><span>3</span> General Info</li>
             <li><span>4</span> Location Info</li>
         </ul>

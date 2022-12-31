@@ -47,10 +47,10 @@ export default function Signup() {
                         <input id="em" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Mail Id' name='email' />
                     </div>
                     <div className='pwd'>
-                        <input id="pw" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password" name='password' />
+                        <input id="pw" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" name='password' />
                     </div>
                     <div className=' con-pwd'>
-                        <input id="con-pw" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder=" Confirm password" name=' confirm password' />
+                        <input id="con-pw" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder=" Confirm Password" name=' confirm password' />
                     </div>
 
                     <div className='btn'>

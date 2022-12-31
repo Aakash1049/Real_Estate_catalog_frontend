@@ -48,7 +48,7 @@ export default function Signin()
             <input id="em" type="email"  placeholder='User Id' name='email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
             </div>  
             <div className='pwd'>
-            <input  id="pw" type="password"  placeholder="password"  name='password' value={password} onChange={(e)=>SetPassword(e.target.value)}/>
+            <input  id="pw" type="Password"  placeholder="Password"  name='password' value={password} onChange={(e)=>SetPassword(e.target.value)}/>
             </div> 
           
             <div className='btn'>
