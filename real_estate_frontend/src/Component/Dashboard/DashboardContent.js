@@ -66,8 +66,8 @@ e.preventDefault()
                 <table >
 
 
-                    <div className="">
-                        <ul className="">
+                    
+                     
                         <tr className="table">
                                 <td >PPD ID</td>
                                 <td>Image</td>
@@ -100,11 +100,11 @@ e.preventDefault()
                                                 <td>{property.Days}</td>
                                                 <td><i class="fa-solid fa-eye" onClick={()=>setView(!view)}></i> <i class="fa-solid fa-pen"></i></td>
                                                 {view?
-                                                <>                                                
+                                                <div className="view">                                                
                                                  <p>Name: {property.name}</p>
                                                  <p>email: {property.email}</p>
                                                  <p>address: {property.address}</p>
-                                                 </>
+                                                 </div>
 
                                                 :"" }
                                             </tr>
@@ -131,11 +131,11 @@ e.preventDefault()
                                                 <td>{property.Days}</td>
                                                 <td><i class="fa-solid fa-eye" onClick={()=>setView(!view)}></i> <i class="fa-solid fa-pen"></i></td>
                                                 {view?
-                                                <>                                                
+                                                <div className="view">                                                
                                                  <p>Name: {property.name}</p>
                                                  <p>email: {property.email}</p>
                                                  <p>address: {property.address}</p>
-                                                 </>
+                                                 </div>
 
                                                 :"" }
                                             </tr>
@@ -145,8 +145,8 @@ e.preventDefault()
                                     )
                                 })
                             }
-                        </ul>
-                    </div>
+                     
+               
                 </table>
             </div>
         </>

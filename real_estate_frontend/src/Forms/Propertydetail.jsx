@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const PropertyDetails = ({ user, data, setData }) => {
     const [length, setLength] = useState("");
     const [breadth, setBreadth] = useState("");
-    const [totalArea, setTotalArea] = useState("");
+    // const [totalArea, setTotalArea] = useState("");
     const [areaUnit, setAreaUnit] = useState("");
     const [bhk, setbhk] = useState("1");
     const [floors, setFloors] = useState("Ground");
@@ -47,7 +47,7 @@ const PropertyDetails = ({ user, data, setData }) => {
                     ...data,
                     length,
                     breadth,
-                    totalArea,
+                    totalArea:calculate(length, breadth),
                     areaUnit,
                     bhk,
                     floors,
