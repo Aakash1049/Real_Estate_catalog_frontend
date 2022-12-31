@@ -26,6 +26,12 @@ const PropertyDetails = ({ user, data, setData }) => {
     // console.log(user, "From Basic Page");
     // console.log(data);
 
+    const calculate =(len, bre)=>{
+        const length = parseInt(len);
+        const breadth = parseInt(bre);
+        const totalArea = parseInt(length*breadth);
+        return totalArea;
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log("Handle Submit Called");
@@ -84,7 +90,7 @@ const PropertyDetails = ({ user, data, setData }) => {
                         </input>
 
                         <h3>Total Area</h3>
-                        <input type="text" id="length" Placeholder="Example:7500" className="input" value={totalArea} onChange={(e) => setTotalArea(e.target.value)}>
+                        <input type="text" id="area" Placeholder="Example:7500" className="input" reaquired value={String(calculate(length, breadth))===String(NaN)? 0:calculate(length, breadth)}>
                         </input>
 
 
