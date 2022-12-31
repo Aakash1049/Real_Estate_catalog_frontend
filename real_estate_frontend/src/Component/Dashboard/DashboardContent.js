@@ -9,11 +9,6 @@ export default function Content() {
     const [properties, setProperties] = useState([])
     const [serachResults, setSearchResults] = useState([])
     const [searchText, setSearchtext] = useState("")
-<<<<<<< HEAD
-    const [view, setView] = useState(false)
-=======
-
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
     useEffect(() => {
         fetch("/getAllProperties", {
             method: "GET",
@@ -28,24 +23,6 @@ export default function Content() {
             })
     }, [properties])
 
-<<<<<<< HEAD
-    const saletypeHandler = (e, PPDID) => {
-        console.log(e.target.value)
-        e.preventDefault()
-
-        fetch(`/updateProperty/${PPDID}`, {
-            method: "PUT",
-            headers: {
-                "Authorization": "Bearer " + localStorage.getItem("jwt")
-            }
-        }).then(res => res.json()).then(data => {
-            alert(data.message)
-        })
-
-
-    }
-=======
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
 
 
 
@@ -77,21 +54,13 @@ export default function Content() {
 
 
                     <tr className="table">
-<<<<<<< HEAD
-                        <td >PPD ID</td>
-=======
                         <td className="table-ppd">PPD ID</td>
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                         <td>Image</td>
                         <td>Property</td>
                         <td>Contact</td>
                         <td>Area</td>
                         <td>Views</td>
-<<<<<<< HEAD
-                        <td >Status</td>
-=======
                         <td>Status</td>
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                         <td>Days Left</td>
                         <td>Action</td>
                     </tr>
@@ -102,69 +71,6 @@ export default function Content() {
                             properties.map((property) => {
                                 console.log(property)
                                 return (
-<<<<<<< HEAD
-                                    <>
-
-
-                                        <tr className="table-data">
-                                            <td>{property.PPDID}</td>
-                                            <td><i class="fa-regular fa-images"></i></td>
-                                            <td>{property.propertyType}</td>
-                                            <td>{property.mobile}</td>
-                                            <td>{property.totalArea}</td>
-                                            <td>{property.Views}</td>
-                                            <td><button id="btt-1" onClick={(e) => saletypeHandler(e, property.PPDID)} value={property.saleType}>{property.saleType}</button></td>
-                                            <td>{property.Days}</td>
-                                            <td><i class="fa-solid fa-eye" onClick={() => setView(!view)}></i> <i class="fa-solid fa-pen"></i></td>
-                                            {view ?
-                                                <div className="view">
-                                                    <p>Name: {property.name}</p>
-                                                    <p>email: {property.email}</p>
-                                                    <p>address: {property.address}</p>
-                                                </div>
-
-                                                : ""}
-                                        </tr>
-
-
-                                    </>
-                                )
-                            })
-                            :
-                            serachResults.map((property) => {
-                                console.log(property)
-                                return (
-                                    <>
-
-
-                                        <tr className="table-data">
-                                            <td>{property.PPDID}</td>
-                                            <td><i class="fa-regular fa-images"></i></td>
-                                            <td>{property.propertyType}</td>
-                                            <td>{property.mobile}</td>
-                                            <td>{property.totalArea}</td>
-                                            <td>{property.Views}</td>
-                                            <td><button id="btt-1" onClick={(e) => saletypeHandler(e, property.PPDID)} value={property.saleType}>{property.saleType}</button></td>
-                                            <td>{property.Days}</td>
-                                            <td><i class="fa-solid fa-eye" onClick={() => setView(!view)}></i> <i class="fa-solid fa-pen"></i></td>
-                                            {view ?
-                                                <div className="view">
-                                                    <p>Name: {property.name}</p>
-                                                    <p>email: {property.email}</p>
-                                                    <p>address: {property.address}</p>
-                                                </div>
-
-                                                : ""}
-                                        </tr>
-
-
-                                    </>
-                                )
-                            })
-                    }
-
-
-=======
                                     <EachProperty property={property} />
                                 )
                             })
@@ -178,7 +84,6 @@ export default function Content() {
                     }
 
 
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
                 </table>
             </div>
         </>

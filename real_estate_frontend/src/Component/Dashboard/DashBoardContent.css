@@ -3,9 +3,9 @@
     width: 84%;
     min-height: 630px;
     background-color: rgb(245, 245, 245);
-    position: relative;
+    position: absolute;
     /* margin-top: -36.13%; */
-    margin-top: -41%;
+    margin-top: -36.13%;
     /* overflow-x: hidden; */
     max-width: 100vw;
 
@@ -162,9 +162,5 @@ table{
     background-color: #F5FAF5;
     border-radius: 5px;
     border: none;
-<<<<<<< HEAD
     color: #416899;
 }
-=======
-}
->>>>>>> ea80cf0dc3b89bf816e51628e7d21c2cb6a98236
