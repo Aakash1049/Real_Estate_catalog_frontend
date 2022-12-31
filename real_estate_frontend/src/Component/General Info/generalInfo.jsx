@@ -4,6 +4,7 @@ import SideBar from '../Dashboard/SideBar'
 import PropertyNavigation from '../PropertyNavigation/PropertyNavigation'
 import "./generalInfo.css";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const GeneralInfo = ({ user, data, setData }) => {
     const [name, setName] = useState("")
@@ -13,20 +14,15 @@ const GeneralInfo = ({ user, data, setData }) => {
     const [featuredPackage, setFeaturedPackage] = useState("")
     const [ppdPackage, setPPDpackage] = useState("")
     const [image, setImage]=useState();
+    const [url,setUrl]=useState()
     const navigate =useNavigate();
 
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        // console.log("Handle Submit Called");
-        try {
-            
-            // const PPID = parseInt(Math.random() * 10000);
-            // const Views = parseInt(Math.random() * 10);
-            // const Days = parseInt(Math.random() * 100);
-            // let ppi = PPID.toString();
-            // ppi = "PPID" + ppi;
-            setData(
+    useEffect(()=>{
+        if(url){
+
+            try {
+                setData(
                 {
                     ...data,
                     name,
@@ -35,19 +31,37 @@ const GeneralInfo = ({ user, data, setData }) => {
                     saleType,
                     featuredPackage,
                     ppdPackage,
-                    image
+                    photo:url
                    
                 }
             )
             console.log(data, user);
             navigate('/locationInfo')
-
+            
         }
         catch (error) {
             alert(error.message, error)
         }
+    }
+    },[url])
+    
+    
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        // console.log("Handle Submit Called");
+        
 
+        const data = new FormData()
+        data.append("file",image)
+        data.append("upload_preset","Real_Estate")
+        data.append("cloud_name","dlji1mozy")
+        fetch("https://api.cloudinary.com/v1_1/dlji1mozy/image/upload",{
+          method:"POST",
+          body:data,
+        }).then(res=>res.json())
+        .then( data=>setUrl(data.secure_url))
+        .catch(err=>console.log(err))
 
     }
 
@@ -105,7 +119,7 @@ const GeneralInfo = ({ user, data, setData }) => {
                     </div>
                 </div>
                 <div className='photo'>
-                    <input type="file" value={image} onChange={(e) => setImage(e.target.value)} id='photo' />
+                    <input type="file" onChange={(e) => setImage(e.target.files[0])} id='photo' />
                     <label id="photo-label" htmlFor="photo"><i class="fa-solid fa-camera"></i></label>
                     &nbsp;  &nbsp; Add photo
                 </div>
