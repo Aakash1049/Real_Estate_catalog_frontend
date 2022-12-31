@@ -79,7 +79,7 @@ const PropertyDetails = ({ user, data, setData }) => {
                 <div className="form">
                     <div className="form-container1">
                         <h3>Length</h3>
-                        <input type="text" id="length" Placeholder="Example:1000" className="input" value={length} onChange={(e) => setLength(e.target.value)}>
+                        <input type="text" id="length" placeholder="Example:1000" className="input" value={length} onChange={(e) => setLength(e.target.value)}>
 
                         </input>
 
