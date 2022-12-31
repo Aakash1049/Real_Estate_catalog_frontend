@@ -8,20 +8,25 @@ import { useNavigate } from "react-router-dom";
 // Header
 
 const Basic = ({ user, data, setData }) => {
-    const [propertyType, setPropertyType] = useState("Home");
-    const [negotialble, setNegotialble] = useState("Yes");
+    const [propertyType, setPropertyType] = useState(data.propertyType);
+    const [negotialble, setNegotialble] = useState(data.negotialble);
     const [price, setPrice] = useState(data.price);
-    const [ownership, setOwnership] = useState("Individual");
-    const [propertyAge, setPropertyAge] = useState("Below 25 years");
-    const [propertyApprove, setPropertyApprove] = useState("Yes");
+    const [ownership, setOwnership] = useState(data.ownership);
+    const [propertyAge, setPropertyAge] = useState(data.propertyAge);
+    const [propertyApprove, setPropertyApprove] = useState(data.propertyApprove);
     const [description, setDescription] = useState(data.description);
-    const [bankLoan, setBankLoan] = useState("Yes");
+    const [bankLoan, setBankLoan] = useState(data.bankLoan);
     const navigate =useNavigate();
 
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(propertyAge,propertyType,price,negotialble,description,bankLoan,ownership,propertyApprove)
+        if(!propertyType || !negotialble || !price || !ownership || !propertyAge ||!propertyApprove || !description || !bankLoan){
+            alert("all fields  are mandatory")
+            return
+        }
         console.log("Handle Submit Called");
         console.log(description, typeof(data.description))
 
@@ -72,8 +77,9 @@ const Basic = ({ user, data, setData }) => {
                 <div className="form">
                     <div className="form-container1">
                         <h3>Property Type</h3>
-                        <select className="input" id="Property" required placeholder="Select Property Type" value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
-                            {/* <option defaultValue={} disabled hidden>Select Property Type</option> */}
+                        <select className="input" id="Property" required value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
+                            <option hidden value>Select Property Type</option>
+                            
                             <option value="Home">Home </option>
                             <option value="Plot">Plot </option>
                             <option value="Flat">Flat </option>
@@ -87,6 +93,7 @@ const Basic = ({ user, data, setData }) => {
                         <h3>Property Age</h3>
                         <select className="input" id="Type" placeholder="Select Property Age" value={propertyAge} onChange={(e) => setPropertyAge(e.target.value)}>
                             {/* <option selected disabled hidden> Select Property Age</option> */}
+                            <option hidden value>Select Property Age</option>
                             <option value="Below 25 years">Below 25</option>
                             <option value="Above 25 years">Above 25</option>
 
@@ -103,6 +110,7 @@ const Basic = ({ user, data, setData }) => {
                         <h3>Negotiable</h3>
                         <select type="text" id="nego" placeholder="Select Negotiable" className="input" value={negotialble} onChange={(e) => setNegotialble(e.target.value)}>
                             {/* <option selected disabled hidden>Select Negotiable</option> */}
+                            <option hidden value>Select Negotiable</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
 
@@ -111,6 +119,7 @@ const Basic = ({ user, data, setData }) => {
                         <h3>Ownership</h3>
                         <select type="text" id="own" placeholder="Select Ownership" className="input" value={ownership} onChange={(e) => setOwnership(e.target.value)}>
                             {/* <option selected disabled hidden> Select Ownership </option> */}
+                            <option hidden value>Select Ownership</option>
                             <option value="Individual">Individual</option>
                             <option value="Joint">Joint</option>
 
@@ -119,6 +128,7 @@ const Basic = ({ user, data, setData }) => {
                         <h3>Property Approved</h3>
                         <select type="text" id="approve" placeholder="Property Approved" className="input" value={propertyApprove} onChange={(e) => setPropertyApprove(e.target.value)} >
                             {/* <option selected disabled hidden> Property Approved</option> */}
+                            <option hidden value>Property Approved</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
 
@@ -127,6 +137,7 @@ const Basic = ({ user, data, setData }) => {
                         <h3>Bank Loan</h3>
                         <select type="text" id="loan" placeholder="Bank Loan" className="input" value={bankLoan} onChange={(e) => setBankLoan(e.target.value)}>
                             {/* <option selected disabled hidden>Bank Loan</option> */}
+                            <option hidden value>Bank Loan</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
 
