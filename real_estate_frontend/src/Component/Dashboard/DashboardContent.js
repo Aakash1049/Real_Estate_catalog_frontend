@@ -19,7 +19,36 @@ export default function Content() {
                 setProperties(data)
 
             })
-    }, [])
+    }, [properties])
+
+const  saletypeHandler =(e,PPDID)=>{
+    console.log(e.target.value)
+e.preventDefault()
+
+    fetch(`/updateProperty/${PPDID}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("jwt")
+        }
+    }).then(res=>res.json()).then(data=>{
+        alert(data.message)
+    })
+
+   // let Array = e.target.value
+    // let Update = {
+    //     saleType :"Unsold",
+    //     Days:0
+    // }
+    // if(e.target.value=="Unsold")
+    // {
+    //     Update.saleType = "Sold"
+    //   Update.Days = parseInt(Math.random() * 10)
+    // }
+
+    // console.log(Update.saleType)
+}
+
+
 
     const searchHandler =(e)=>{
         const search=e.target.value
@@ -85,20 +114,12 @@ export default function Content() {
                                                 <td>{property.mobile}</td>
                                                 <td>{property.totalArea}</td>
                                                 <td>{property.Views}</td>
-                                                <td>{property.saleType}</td>
+                                                <td><button  id="btt-1" onClick={(e)=>saletypeHandler(e,property.PPDID)} value={property.saleType}>{property.saleType}</button></td>
                                                 <td>{property.Days}</td>
                                                 <td><i class="fa-solid fa-eye"></i> <i class="fa-solid fa-pen"></i></td>
                                             </tr>
 
-                                            {/* <li className="list-item">{property.PPDID}</li>
-                                    <li className="list-item">Image</li>
-                                    <li className="list-item">{property.propertyType}</li>
-                                    <li className="list-item">{property.mobile}</li>
-                                    <li className="list-item">{property.area}</li>
-                                    <li className="list-item">{property.Views}</li>
-                                    <li className="list-item">{property.saleType}</li>
-                                    <li className="list-item">{property.Days}</li>
-                                    <li className="list-item">v/e</li> */}
+        
                                         </>
                                     )
                                 })

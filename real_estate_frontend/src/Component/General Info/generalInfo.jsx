@@ -10,7 +10,7 @@ const GeneralInfo = ({ user, data, setData }) => {
     const [name, setName] = useState("")
     const [mobile, setmobile] = useState()
     const [postedBy, setPostedBy] = useState("Owner")
-    const [saleType, setSaleType] = useState("Sold")
+    const [saleType, setSaleType] = useState("Unsold")
     const [featuredPackage, setFeaturedPackage] = useState("")
     const [ppdPackage, setPPDpackage] = useState("")
     const [image, setImage]=useState();
