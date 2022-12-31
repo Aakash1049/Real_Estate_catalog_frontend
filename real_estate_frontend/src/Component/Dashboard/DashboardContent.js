@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Content() {
     const navigate = useNavigate();
     const [properties, setProperties] = useState([])
+    const [serachResults, setSearchResults]=useState([])
     useEffect(() => {
         fetch("/getAllProperties", {
             method: "GET",
@@ -20,11 +21,23 @@ export default function Content() {
             })
     }, [])
 
+    const searchHandler =(e)=>{
+        const search=e.target.value
+        fetch(`/search/${search}`,{
+            method:"GET",
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            setSearchResults(data)
+            console.log(serachResults,"is serch reslut")
+        })
+    }
     return (
         <>
             <SideBar />
             <div className="content">
-                <input id="search" type="text" placeholder="Search PPD ID" name="search" />
+                <input id="search" type="text" onChange={(e)=>searchHandler(e)} placeholder="Search PPD ID" name="search" />
                 <button id="btn" onClick={() => navigate("/Basicinfo")}>+ Add Property</button>
 
 
@@ -67,14 +80,14 @@ export default function Content() {
 
                                             <tr className="table-data">
                                                 <td>{property.PPDID}</td>
-                                                <td>Image</td>
+                                                <td><i class="fa-regular fa-images"></i></td>
                                                 <td>{property.propertyType}</td>
                                                 <td>{property.mobile}</td>
-                                                <td>{property.area}</td>
+                                                <td>{property.totalArea}</td>
                                                 <td>{property.Views}</td>
                                                 <td>{property.saleType}</td>
                                                 <td>{property.Days}</td>
-                                                <td>v/e</td>
+                                                <td><i class="fa-solid fa-eye"></i> <i class="fa-solid fa-pen"></i></td>
                                             </tr>
 
                                             {/* <li className="list-item">{property.PPDID}</li>
