@@ -99,14 +99,14 @@ const  saletypeHandler =(e)=>{
 
                                             <tr className="table-data">
                                                 <td>{property.PPDID}</td>
-                                                <td>Image</td>
+                                                <td><i class="fa-regular fa-images"></i></td>
                                                 <td>{property.propertyType}</td>
                                                 <td>{property.mobile}</td>
-                                                <td>{property.area}</td>
+                                                <td>{property.totalArea}</td>
                                                 <td>{property.Views}</td>
                                                 <td><button onClick={saletypeHandler} value={property.saleType}>{property.saleType}</button></td>
                                                 <td>{property.Days}</td>
-                                                <td>v/e</td>
+                                                <td><i class="fa-solid fa-eye"></i> <i class="fa-solid fa-pen"></i></td>
                                             </tr>
 
                                             {/* <li className="list-item">{property.PPDID}</li>
