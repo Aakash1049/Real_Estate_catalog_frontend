@@ -5,6 +5,7 @@
     background-color: rgb(245, 245, 245);
     position: relative;
     margin-top: -36.13%;
+    overflow-x: hidden;
 }
 
 h4{
@@ -98,7 +99,11 @@ li{
 table{
     width: 200vw;
     /* border-collapse: collapse; */
+     border-collapse: separate;    
+    border-spacing: 0 8px; 
+    
 }
+
 .table{
     color: #284E91;
     
@@ -107,9 +112,7 @@ table{
     font-style: normal;
     font-weight: 400px;
     font-size: 20px;
-    line-height: 50px;  
-    /* margin-bottom: 50px; */
-    border-bottom: 50px;
+    line-height: 50px;
 }
 
 
@@ -121,18 +124,16 @@ table{
     font-style: normal;
     font-weight: 400px;
     font-size: 20px;
-    line-height: 25px; 
-    padding: 20px;
-    
-    
+    line-height: 25px;;
     
 }
-
 
 
 .table td{
-    padding: 0 15px;
+    padding: 0 38px;
+    
 }
+
 
 .list-item
 {
