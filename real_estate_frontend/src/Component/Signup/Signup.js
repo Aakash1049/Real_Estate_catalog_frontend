@@ -42,6 +42,7 @@ export default function Signup() {
                     </section>
                     <h2>Create  New Account</h2>
 
+      
                     <div className='email'>
                         <input id="em" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Mail Id' name='email' />
                     </div>
