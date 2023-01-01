@@ -2,24 +2,23 @@
 
 
 .form-basicinfo{
-    background-color: #F5F5F5;
-    margin-top: -27%;
+    margin-top: -87%;
     margin-left: 17%;
+    position: relative;
+    padding-bottom: 30px;
 }
 
 .form-basicinfo .form {
     
     display: flex;
-    
-    justify-content: space-between;
+    background-color: white;
+    justify-content: space-around;
 }
-
-
 
 
 .form-basicinfo .form-container1 {
     margin: 2%;
-    margin-left: 5%;
+    margin-left: 2%;
     padding: 1%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -35,7 +34,9 @@
     border: 1px solid #C3C3C3;
     border-radius: 8px;
 }
-
+.form-basicinfo .SaveBtn{
+    background-color:#4C57B6;
+}
 
 
 .form-basicinfo h3 {
@@ -49,6 +50,7 @@
 
 .form-basicinfo .form-container2 {
     margin: 2%;
+    margin-left: -12%;
 
     padding: 1%;
     flex-direction: column;

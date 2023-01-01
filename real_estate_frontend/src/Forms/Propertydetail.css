@@ -2,8 +2,9 @@
 
 
 .form-basic{
+    position: relative;
     background-color: #F5F5F5;
-    margin-top: -27%;
+    margin-top: -87%;
     margin-left: 17%;
     justify-content: space-between;
 }
@@ -11,6 +12,8 @@
 
 .form-basic .form{
     display: flex;
+    position: relative;
+    background-color: white;
     margin-top: -27%;
     margin-left: 5%;
     justify-content: space-between;
@@ -73,4 +76,7 @@
 }
 .form-basic .buttons{
     margin-left: 0%;
+    background-color: white;
+    width: 90%;
+    align-self: flex-start;
 }
