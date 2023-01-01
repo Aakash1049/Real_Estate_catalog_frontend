@@ -42,6 +42,7 @@ export default function Content() {
     return (
         <>
             <SideBar />
+        <div id="All-content">
             <div className="content">
                 <input id="search" type="text" value={searchText} onChange={(e) => searchHandler(e)} placeholder="Search PPD ID" name="search" />
                 <button id="btn" onClick={() => navigate("/Basicinfo")}>+ Add Property</button>
@@ -85,6 +86,7 @@ export default function Content() {
 
 
                 </table>
+            </div>
             </div>
         </>
     )

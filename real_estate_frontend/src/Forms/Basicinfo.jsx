@@ -71,7 +71,7 @@ const Basic = ({ user, data, setData }) => {
             <Sidebar />
             <PropertyNavigation />
 
-            <form action="" className="form-basicinfo" >
+            <form action="" style={{backgroundColor: "white"}} className="form-basicinfo" >
 
 
                 <div className="form">
@@ -153,7 +153,7 @@ const Basic = ({ user, data, setData }) => {
                     <button> Cancel</button>
                     </Link>
                     <Link to="/Propertydetail">
-                        <button onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
+                        <button className="SaveBtn" onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
                     </Link>
                 </div>
 

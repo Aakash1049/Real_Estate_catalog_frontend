@@ -36,7 +36,7 @@ export default function Signin()
 
     return (
         <>
-        <form>
+         <div  className='container'>
         <div className='main'>
       <section className='logo'>
         {/* <img  id="log" src={require("../../Images/logo.jpg")} alt='logo'/> */}
@@ -57,7 +57,7 @@ export default function Signin()
             <Link to="/Signup" >Sign Up</Link>
           </div>
          <h3>Don’t have an account?<Link to="/Signup" >Sign Up</Link></h3>
-         </form>
+         </div>
         </>
     )
 }
