@@ -27,7 +27,7 @@ const EachProperty = ({ property }) => {
 
             <tr className="table-data">
                 <td>{property.PPDID}</td>
-                <td><i class="fa-regular fa-images" onClick={()=>setShowImage(!showImage)}></i></td>
+                <td><i  class="fa-regular fa-images"  onClick={()=>setShowImage(!showImage)}></i></td>
                 {
                     showImage?
                     Swal.fire({

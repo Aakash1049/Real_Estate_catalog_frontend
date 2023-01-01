@@ -21,7 +21,7 @@ export default function SideBar() {
 
 
                 <div className="side-bar">
-                    <h1>Logo </h1>
+                    <h1 className="side-bar-logo">Logo </h1>
                     <section className="opt">
                         <ul>
                             <li id="l-1"><img className="img-1" src={require("../../Images/property.png")} /> Property</li>

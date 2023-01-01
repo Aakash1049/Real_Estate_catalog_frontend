@@ -149,7 +149,9 @@ const Basic = ({ user, data, setData }) => {
 
                 </div>
                 <div className="buttons">
+                    <Link to="/Content">
                     <button> Cancel</button>
+                    </Link>
                     <Link to="/Propertydetail">
                         <button onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
                     </Link>

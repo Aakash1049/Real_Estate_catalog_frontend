@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .form-basicinfo{
     background-color: #F5F5F5;
-    margin-top: -27%;
+    margin-top: -33%;
     margin-left: 17%;
+    
 }
 
 .form-basicinfo .form {
@@ -9,6 +12,8 @@
     display: flex;
     
     justify-content: space-between;
+   
+  
 }
 
 
@@ -21,6 +26,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 30%;
+    
 
     
 }
