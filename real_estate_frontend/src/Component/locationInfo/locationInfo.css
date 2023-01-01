@@ -49,3 +49,6 @@
 .locationInfo .buttons{
     margin-left: 40%;
 }
+.locationInfo .SaveBtn{
+    background-color:#4C57B6;
+}

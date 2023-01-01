@@ -1,8 +1,9 @@
 
 
 .generalInfo{
-    margin-top: -400px;
-    margin-left: 250px;
+    position: relative;
+    margin-top: -87%;
+    margin-left: 300px;
     border: 1px solid white;
     max-width: fit-content;
     background-color: white;
@@ -56,6 +57,9 @@
     color: white;
     margin-right: 10px;
     margin-top: 25px;
+}
+.generalInfo .SaveBtn{
+    background-color:#4C57B6;
 }
 .generalInfo .buttons{
     margin-left: 40%;

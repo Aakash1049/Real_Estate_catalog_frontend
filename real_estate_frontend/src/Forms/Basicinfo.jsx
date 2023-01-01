@@ -4,6 +4,7 @@ import Sidebar from "../Component/Dashboard/SideBar";
 import "../Forms/Basicinfo.css";
 import PropertyNavigation from "../Component/PropertyNavigation/PropertyNavigation";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 // Header
 
@@ -16,9 +17,10 @@ const Basic = ({ user, data, setData }) => {
     const [propertyApprove, setPropertyApprove] = useState(data.propertyApprove);
     const [description, setDescription] = useState(data.description);
     const [bankLoan, setBankLoan] = useState(data.bankLoan);
+    let location = useLocation();
     const navigate =useNavigate();
 
-
+    // console.log(location.pathname);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -69,7 +71,7 @@ const Basic = ({ user, data, setData }) => {
     return (
         <div>
             <Sidebar />
-            <PropertyNavigation />
+            <PropertyNavigation path={location.pathname} />
 
             <form action="" style={{backgroundColor: "white"}} className="form-basicinfo" >
 

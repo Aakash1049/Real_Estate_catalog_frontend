@@ -4,6 +4,8 @@ import Sidebar from "../Component/Dashboard/SideBar";
 import PropertyNavigation from "../Component/PropertyNavigation/PropertyNavigation";
 import "../Forms/Propertydetail.css";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+
 
 // Header
 
@@ -22,6 +24,9 @@ const PropertyDetails = ({ user, data, setData }) => {
     const [facing, setFacing]=useState("East");
     const [electricity, setElectricity]=useState("1 Phase");
     const navigate =useNavigate();
+    let location = useLocation();
+
+    
 
     // console.log(user, "From Basic Page");
     // console.log(data);
@@ -78,7 +83,7 @@ const PropertyDetails = ({ user, data, setData }) => {
     return (
         <div>
             <Sidebar/>
-            <PropertyNavigation/>
+            <PropertyNavigation  path={location.pathname}/>
             <form action="" className="form-basic">
 
 
@@ -197,7 +202,7 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                 <div className="buttons">
                 <button onClick={()=>navigate("/basicInfo")}> Previous</button>
-                <button onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
+                <button className="SaveBtn" onClick={(e)=>handleSubmit(e)}> Save & Continue</button>
                 </div>
                 
 

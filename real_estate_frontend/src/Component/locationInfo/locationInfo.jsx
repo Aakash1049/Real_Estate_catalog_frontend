@@ -5,6 +5,7 @@ import PropertyNavigation from '../PropertyNavigation/PropertyNavigation'
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const LocationInfo = ({ user, data, setData }) => {
     const [email,setEmail]=useState("")
@@ -16,7 +17,7 @@ const LocationInfo = ({ user, data, setData }) => {
     const [lattitude, setLattitude]=useState();
     const [longitude, setLongitude]=useState();
     const navigate =useNavigate();
-
+    const location = useLocation()
     useEffect(()=>{
         if(!data.email) return
 
@@ -93,7 +94,7 @@ const LocationInfo = ({ user, data, setData }) => {
     return (
         <>
                 <SideBar />
-                <PropertyNavigation/>
+                <PropertyNavigation path={location.pathname}/>
             <form className='locationInfo'>
                 <div className='a'>
                     <div>
@@ -147,7 +148,7 @@ const LocationInfo = ({ user, data, setData }) => {
                 <div className="buttons">
                 
                 <button onClick={()=>navigate("/generalInfo")}>Previous</button>
-                <button onClick={(e)=>handleSubmit(e)}>Add Property</button>
+                <button className="SaveBtn" onClick={(e)=>handleSubmit(e)}>Add Property</button>
                 </div>
             
             </form>

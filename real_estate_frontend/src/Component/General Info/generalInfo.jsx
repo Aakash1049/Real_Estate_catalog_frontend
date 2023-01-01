@@ -5,6 +5,7 @@ import PropertyNavigation from '../PropertyNavigation/PropertyNavigation'
 import "./generalInfo.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const GeneralInfo = ({ user, data, setData }) => {
     const [name, setName] = useState("")
@@ -16,6 +17,7 @@ const GeneralInfo = ({ user, data, setData }) => {
     const [image, setImage]=useState();
     const [url,setUrl]=useState()
     const navigate =useNavigate();
+    let location = useLocation();
 
 
     useEffect(()=>{
@@ -71,7 +73,7 @@ const GeneralInfo = ({ user, data, setData }) => {
     return (
         <>
             <SideBar/>
-            <PropertyNavigation/>
+            <PropertyNavigation path={location.pathname}/>
             <form className='generalInfo'>
                 <div className='a'>
                     <div>
@@ -125,8 +127,8 @@ const GeneralInfo = ({ user, data, setData }) => {
                 </div>
                 <div className="buttons">
 
-                    <button onClick={()=>navigate("/Propertydetail")}>Previous</button>
-                    <button onClick={(e)=>handleSubmit(e)}>Save & Continue</button>
+                    <button  onClick={()=>navigate("/Propertydetail")}>Previous</button>
+                    <button  className="SaveBtn" onClick={(e)=>handleSubmit(e)}>Save & Continue</button>
                 </div>
             </form>
         </>
