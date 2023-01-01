@@ -27,7 +27,7 @@ const EachProperty = ({ property }) => {
 
             <tr className="table-data">
                 <td>{property.PPDID}</td>
-                <td><i  class="fa-regular fa-images"  onClick={()=>setShowImage(!showImage)}></i></td>
+                <td><i  class="fa-regular fa-images" style={{color:"#DFDFDF"}}  onClick={()=>setShowImage(!showImage)}></i></td>
                 {
                     showImage?
                     Swal.fire({
@@ -47,7 +47,7 @@ const EachProperty = ({ property }) => {
                 <td>{property.Views}</td>
                 <td><button id="btt-1" onClick={(e) => saletypeHandler(e, property.PPDID)} value={property.saleType}>{property.saleType}</button></td>
                 <td>{property.Days}</td>
-                <td><i class="fa-solid fa-eye" onClick={() => setView(!view)}></i> <i class="fa-solid fa-pen"></i></td>
+                <td><i class="fa-solid fa-eye" style={{color:"#DFDFDF"}} onClick={() => setView(!view)}></i> <i class="fa-solid fa-pen" style={{color:"#DFDFDF"}} ></i></td>
 
             </tr>
             {view ?

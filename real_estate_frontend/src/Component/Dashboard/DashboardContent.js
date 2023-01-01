@@ -54,7 +54,7 @@ export default function Content() {
 
 
                     <tr className="table">
-                        <td className="table-ppd">PPD ID</td>
+                        <td >PPD ID</td>
                         <td>Image</td>
                         <td>Property</td>
                         <td>Contact</td>
