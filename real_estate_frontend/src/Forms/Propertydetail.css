@@ -7,6 +7,7 @@
     margin-top: -87%;
     margin-left: 17%;
     justify-content: space-between;
+    /* overflow-x: hidden; */
 }
 
 
@@ -75,8 +76,9 @@
     
 }
 .form-basic .buttons{
-    margin-left: 0%;
+    margin-left: 5%;
     background-color: white;
-    width: 90%;
-    align-self: flex-start;
+    width: 100%;
+    /* align-self: flex-start; */
+    padding-bottom: 2%;
 }
