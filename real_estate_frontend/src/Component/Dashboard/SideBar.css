@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 
+
 .dashboard{
     display: flex;
     flex-direction: row;
@@ -12,7 +13,8 @@
 .side-bar{
     width: 20%;
     min-height: 630px;
-  
+    min-height:100vw;
+  background-color:	#add8e6;
 }
 
 

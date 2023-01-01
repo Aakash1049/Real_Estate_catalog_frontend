@@ -1,11 +1,16 @@
+#All-content{
+    background: #add8e6;
+}
+
+
 .content{
-    margin-left: 16.70%;
+    margin-left: 16.80%;
     width: 84%;
-    min-height: 630px;
+    min-height: 90vw;
     background-color: rgb(245, 245, 245);
     position: absolute;
     /* margin-top: -36.13%; */
-    margin-top: -36.13%;
+    margin-top: -96%;
     /* overflow-x: hidden; */
     max-width: 100vw;
 

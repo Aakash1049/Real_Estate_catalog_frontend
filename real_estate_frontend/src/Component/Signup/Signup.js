@@ -35,7 +35,8 @@ export default function Signup() {
 
     return (
         <>
-            <form>
+        <div  className='container'>
+         
                 <div className='main'>
                     <section className='logo'>
                         <h1>Logo</h1>
@@ -58,7 +59,8 @@ export default function Signup() {
                     </div>
                 </div>
                 <Link to="/">Sign in</Link>
-            </form>
+        </div>
+          
         </>
     )
 }
