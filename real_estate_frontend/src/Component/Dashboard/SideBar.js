@@ -24,12 +24,12 @@ export default function SideBar() {
                     <h1 className="side-bar-logo">Logo </h1>
                     <section className="opt">
                         <ul>
-                            <li id="l-1"><img className="img-1" src={require("../../Images/property.png")} /> Property</li>
-                            <li><img className="img-1" src={require("../../Images/bell.png")} /> Assistance</li>
-                            <li><img className="img-1" src={require("../../Images/recieved.webp")} /> Recieved Interest</li>
-                            <li><img className="img-1" src={require("../../Images/sent.jpg")} /> Sent Interest</li>
-                            <li><img className="img-1" src={require("../../Images/views.png")} /> Property Views</li>
-                            <li><img className="img-1" src={require("../../Images/tarrif.png")} /> Tariff Plan</li>
+                            <li id="l-1"><i class="fa-solid fa-house"></i> Property</li>
+                            <li><i class="fa-regular fa-bell"></i> Assistance</li>
+                            <li><i class="fa-solid fa-download"></i>Recieved Interest</li>
+                            <li><i class="fa-solid fa-upload"></i> Sent Interest</li>
+                            <li><i class="fa-solid fa-eye"></i> Property Views</li>
+                            <li><i class="fa-solid fa-tag"></i> Tariff Plan</li>
                         </ul>
                     </section>
                 </div>
