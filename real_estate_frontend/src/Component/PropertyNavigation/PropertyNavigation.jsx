@@ -6,7 +6,7 @@ const PropertyNavigation = () => {
     <>
     
     <div className='Propertynavigation'>
-    <h3>
+    <h3 className='add-back'>
     Add New Property
     </h3>
         <ul>
