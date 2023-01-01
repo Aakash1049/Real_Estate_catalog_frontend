@@ -16,7 +16,7 @@ li i{
 .side-bar {
     width: 20%;
     /* min-height: 630px; */
-    min-height:100vw;
+    height :800px;
     /* height: 50vw; */
   background-color:	#add8e6;
 }

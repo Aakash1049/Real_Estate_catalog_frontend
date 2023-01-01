@@ -4,10 +4,10 @@
 .form-basic{
     position: relative;
     background-color: #F5F5F5;
-    margin-top: -87%;
+    margin-top: -45%;
     margin-left: 17%;
     justify-content: space-between;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 
@@ -16,7 +16,7 @@
     position: relative;
     background-color: white;
     margin-top: -27%;
-    margin-left: 5%;
+    margin-left: 0%;
     justify-content: space-between;
     
    
@@ -27,15 +27,15 @@
     /* display: flex; */
     width: 50vh;
     height: 6vh;
-
+    color: #7D7D7D;
     border: 1px solid #C3C3C3;
     border-radius: 8px;
 }
 
 
 .form-basic .form-container1 {
-    margin: 2%;
-    padding: 1%;
+    margin-top: 300px;
+    padding: 1%;    
     /* display: grid; */
     flex-direction: column;
     justify-content: space-evenly;
@@ -48,17 +48,18 @@
     background-color:#4C57B6;
 }
 .form-basic h3 {
-    margin: 3%;
-    padding: 1%;
+    margin: 2%;
+    padding-left: 100px;
     text-align: left;
     font-size: 22px;
+    color: #7D7D7D;
     
 }
 
 
 
 .form-basic .form-container2 {
-    margin: 2%;
+    margin-top: 300px;
     padding: 1%;
     /* display: grid; */
     flex-direction: column;

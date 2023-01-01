@@ -71,7 +71,7 @@ const Basic = ({ user, data, setData }) => {
     return (
         <div>
             <Sidebar />
-            <PropertyNavigation path={location.pathname} />
+            <PropertyNavigation path={location.pathname}  className="basicInfo-Nav"/>
 
             <form action="" style={{backgroundColor: "white"}} className="form-basicinfo" >
 

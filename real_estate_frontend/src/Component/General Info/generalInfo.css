@@ -2,14 +2,16 @@
 
 .generalInfo{
     position: relative;
-    margin-top: -87%;
-    margin-left: 300px;
+    margin-top: -45%;
+    margin-left: 230px;
     border: 1px solid white;
     max-width: fit-content;
     background-color: white;
     padding: 20px 20px;
     border-radius: 5px;
     text-align: start;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 .generalInfo div{
     margin: 12px 12px;
@@ -20,12 +22,19 @@
     line-height: 20px;
     text-align: start;
     color: #7D7D7D;
+    padding-left: 30px;
 }
 .generalInfo input, .generalInfo select, .generalInfo option{
-    width: 95%;
+    /* width: 95%;
     border:1px solid #7D7D7D;
     border-radius: 5px;
-    height: 30px;
+    height: 30px; */
+    width: 50vh;
+    height: 5vh;
+    color: #7D7D7D;
+    border: 1px solid #C3C3C3;
+    border-radius: 8px;
+    margin-left: 30px;
 }
 .generalInfo #postedBy{
     height: 35px;
@@ -33,6 +42,8 @@
 .generalInfo .a{
     display: grid;
     grid-template-columns: 600px 600px;
+    margin-top: -10px;
+    /* padding-left: 30px; */
 }
 .generalInfo input[type="file"]{
     display: none;
@@ -48,6 +59,7 @@
 }
 .generalInfo .photo{
     margin-top: 35px;
+    margin-left: 40px;
 }
 .generalInfo button{
     background-color:#6AB4F8;
