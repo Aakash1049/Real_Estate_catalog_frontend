@@ -96,8 +96,8 @@ const Basic = ({ user, data, setData }) => {
                         <select className="input" id="Type" placeholder="Select Property Age" value={propertyAge} onChange={(e) => setPropertyAge(e.target.value)}>
                             {/* <option selected disabled hidden> Select Property Age</option> */}
                             <option hidden value>Select Property Age</option>
-                            <option value="Below 25 years">Below 25</option>
-                            <option value="Above 25 years">Above 25</option>
+                            <option value="Below 25 years">Below 25 years</option>
+                            <option value="Above 25 years">Above 25 years</option>
 
                         </select>
 

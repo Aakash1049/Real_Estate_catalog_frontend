@@ -8,12 +8,12 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const GeneralInfo = ({ user, data, setData }) => {
-    const [name, setName] = useState("")
-    const [mobile, setmobile] = useState()
-    const [postedBy, setPostedBy] = useState("Owner")
-    const [saleType, setSaleType] = useState("Unsold")
-    const [featuredPackage, setFeaturedPackage] = useState("")
-    const [ppdPackage, setPPDpackage] = useState("")
+    const [name, setName] = useState(data.name)
+    const [mobile, setmobile] = useState(data.mobile)
+    const [postedBy, setPostedBy] = useState(data.postedBy)
+    const [saleType, setSaleType] = useState(data.saleType)
+    const [featuredPackage, setFeaturedPackage] = useState(data.featuredPackage)
+    const [ppdPackage, setPPDpackage] = useState(data.ppdPackage)
     const [image, setImage]=useState();
     const [url,setUrl]=useState()
     const navigate =useNavigate();
@@ -22,6 +22,7 @@ const GeneralInfo = ({ user, data, setData }) => {
 
     useEffect(()=>{
         if(url){
+            
 
             try {
                 setData(
@@ -52,7 +53,10 @@ const GeneralInfo = ({ user, data, setData }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log("Handle Submit Called");
-        
+        if(!name || !mobile || !postedBy || !saleType || !featuredPackage || !ppdPackage ||!image){
+            alert("All fields are mandatory")
+            return
+        }
 
         const data = new FormData()
         data.append("file",image)
@@ -92,7 +96,7 @@ const GeneralInfo = ({ user, data, setData }) => {
                         <label htmlFor="postedBy">Posted By</label>
                         <br />
                         <select id="postedBy" value={postedBy} onChange={(e) => setPostedBy(e.target.value)}>
-                            <option>Select</option>
+                            <option hidden value>Posted By</option>
                             <option value="Owner">Owner</option>
                             <option value="Agent">Agent</option>
                         </select> <br />
@@ -101,7 +105,7 @@ const GeneralInfo = ({ user, data, setData }) => {
                         <label htmlFor="saleType" >Sale Type</label>
                         <br />
                         <select id="postedBy" value={saleType} onChange={(e) => setSaleType(e.target.value)}>
-                            <option>Select</option>
+                            <option hidden value>Sale Type</option>
                             <option value="Sold">Sold</option>
                             <option value="Unsold">Unsold</option>
                         </select> <br />

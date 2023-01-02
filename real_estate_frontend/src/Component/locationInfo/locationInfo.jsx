@@ -8,14 +8,14 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const LocationInfo = ({ user, data, setData }) => {
-    const [email,setEmail]=useState("")
-    const [city,setCity]=useState("")
-    const [area,setArea]=useState("")
-    const [pincode, setPincode]=useState();
-    const [address,setAdress]=useState("");
-    const [landmark,setLandmark]=useState("");
-    const [lattitude, setLattitude]=useState();
-    const [longitude, setLongitude]=useState();
+    const [email,setEmail]=useState(data.email)
+    const [city,setCity]=useState(data.city)
+    const [area,setArea]=useState(data.area)
+    const [pincode, setPincode]=useState(data.pincode);
+    const [address,setAdress]=useState(data.address);
+    const [landmark,setLandmark]=useState(data.landmark);
+    const [lattitude, setLattitude]=useState(data.lattitude);
+    const [longitude, setLongitude]=useState(data.longitude);
     const navigate =useNavigate();
     const location = useLocation()
     useEffect(()=>{
@@ -47,7 +47,7 @@ const LocationInfo = ({ user, data, setData }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(!email || !city || !area || !pincode || !address || !lattitude || !longitude){
+        if(!email || !city || !area || !pincode || !address || !landmark || !lattitude || !longitude){
             alert("all fields are mandatory")
             return
         }
@@ -100,7 +100,7 @@ const LocationInfo = ({ user, data, setData }) => {
                     <div>
                         <label htmlFor="email">Email</label>
                         <br />
-                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} id="email" /> <br />
+                        <input type="email" value={email}  placeholder='Email' onChange={(e)=>setEmail(e.target.value)} id="email" /> <br />
                     </div>
                     <div>
                         <label htmlFor="city">City</label>
@@ -112,7 +112,7 @@ const LocationInfo = ({ user, data, setData }) => {
                     <div>
                         <label htmlFor="area">Area</label>
                         <br />
-                        <input type="text" value={area} onChange={(e)=>setArea(e.target.value)}  id="area" /> <br />
+                        <input type="text" value={area} onChange={(e)=>setArea(e.target.value)} placeholder='Area' id="area" /> <br />
                     </div>
                     <div>
                         <label htmlFor="pincode">Pincode</label>
@@ -125,24 +125,24 @@ const LocationInfo = ({ user, data, setData }) => {
                     <div>
                         <label htmlFor="address">Address</label>
                         <br />
-                        <input type="text" value={address} onChange={(e)=>setAdress(e.target.value)}  id="address" /> <br />
+                        <input type="text" value={address} onChange={(e)=>setAdress(e.target.value)} placeholder='Address' id="address" /> <br />
                     </div>
                     <div>
                         <label htmlFor="landmark">Landmark</label>
                         <br />
-                        <input type="text" value={landmark} onChange={(e)=>setLandmark(e.target.value)}  id="landmark" />
+                        <input type="text" value={landmark} onChange={(e)=>setLandmark(e.target.value)} placeholder='Landmark'  id="landmark" />
                     </div>
                 </div>
                 <div className='a'>
                     <div>
                         <label htmlFor="lattitude">lattitude</label>
                         <br />
-                        <input type="number" value={lattitude} onChange={(e)=>setLattitude(e.target.value)}  id="lattitude" /> <br />
+                        <input type="number" value={lattitude} onChange={(e)=>setLattitude(e.target.value)} placeholder='Lattitude' id="lattitude" /> <br />
                     </div>
                     <div>
                         <label htmlFor="longitude">longitude</label>
                         <br />
-                        <input type="number" value={longitude} onChange={(e)=>setLongitude(e.target.value)}  id="longitude" />
+                        <input type="number" value={longitude} onChange={(e)=>setLongitude(e.target.value)} placeholder='Longitude' id="longitude" />
                     </div>
                 </div>
                 <div className="buttons">

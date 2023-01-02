@@ -10,19 +10,19 @@ import { useLocation } from 'react-router-dom';
 // Header
 
 const PropertyDetails = ({ user, data, setData }) => {
-    const [length, setLength] = useState("");
-    const [breadth, setBreadth] = useState("");
+    const [length, setLength] = useState(data.length);
+    const [breadth, setBreadth] = useState(data.breadth);
     // const [totalArea, setTotalArea] = useState("");
-    const [areaUnit, setAreaUnit] = useState("");
-    const [bhk, setbhk] = useState("1");
-    const [floors, setFloors] = useState("Ground");
-    const [attached, setAttached]=useState("Yes");
-    const [western, setWestern]=useState("Yes");
-    const [furnished, setFurnished] = useState("Fully Furnished");
-    const [lifts, setLifts]=useState("Yes");
-    const [parking, setParking]=useState("Yes");
-    const [facing, setFacing]=useState("East");
-    const [electricity, setElectricity]=useState("1 Phase");
+    const [areaUnit, setAreaUnit] = useState(data.areaUnit);
+    const [bhk, setbhk] = useState(data.bhk);
+    const [floors, setFloors] = useState(data.floors);
+    const [attached, setAttached]=useState(data.attached);
+    const [western, setWestern]=useState(data.western);
+    const [furnished, setFurnished] = useState(data.furnished);
+    const [lifts, setLifts]=useState(data.lifts);
+    const [parking, setParking]=useState(data.parking);
+    const [facing, setFacing]=useState(data.facing);
+    const [electricity, setElectricity]=useState(data.electricity);
     const navigate =useNavigate();
     let location = useLocation();
 
@@ -39,6 +39,10 @@ const PropertyDetails = ({ user, data, setData }) => {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if(!length || !breadth || !areaUnit || !bhk || !floors || !attached || !western || !furnished || !lifts || !parking || !facing || !electricity){
+            alert("all fields are manadatory")
+            return
+        }
         // console.log("Handle Submit Called");
         try {
             
@@ -95,13 +99,13 @@ const PropertyDetails = ({ user, data, setData }) => {
                         </input>
 
                         <h3>Total Area</h3>
-                        <input type="text" id="area" Placeholder="Example:7500" className="input" reaquired value={String(calculate(length, breadth))===String(NaN)? 0:calculate(length, breadth)}>
+                        <input type="text" id="area" Placeholder="Example:7500" readonly className="input" reaquired value={String(calculate(length, breadth))===String(NaN)? 0:calculate(length, breadth)}>
                         </input>
 
 
                         <h3>No of BHK</h3>
                         <select className="input" id="bhk" placeholder="Select No of BHK" value={bhk} onChange={(e) => setbhk(e.target.value)}>
-                            {/* <option> Select No of BHK</option> */}
+                            <option hidden value>Select No of BHK</option>
                             <option value={1} >1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -112,14 +116,14 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                         <h3>Attached</h3>
                         <select className="input" id="attached" placeholder="Select Attached" value={attached} onChange={(e) => setAttached(e.target.value)} >
-                            <option> Select Attached</option>
+                            <option hidden value>Select attached</option>
                             <option value="Yes">Yes</option>
                             <option value= "No">No</option>
                         </select>
 
                         <h3>Furnished</h3>
                         <select className="input" id="furnished" placeholder="Select Furnished" value={furnished} onChange={(e) => setFurnished(e.target.value)}>
-                            <option> Select Furnished</option>
+                            <option hidden value>Select Furnished</option>
                             <option value="Fully Furnished" >Fully Furnished</option>
                             <option value="Semi Furnished">Semi Furnished</option>
                             <option value="None">None</option>
@@ -127,14 +131,14 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                         <h3>Lift</h3>
                         <select className="input" id="lift" placeholder="Select Lift"  value={lifts} onChange={(e) => setLifts(e.target.value)}>
-                            <option> Select Lift</option>
+                            <option hidden value>Select Lift</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
 
                         <h3>Facing</h3>
                         <select className="input" id="facing" placeholder="Select Facing" value={facing} onChange={(e) => setFacing(e.target.value)}>
-                            <option> Select Facing</option>
+                             <option hidden value>Select Facing</option>
                             <option value="East">East</option>
                             <option value="West">West</option>
                             <option value="South">South</option>
@@ -153,7 +157,7 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                         <h3>Area Unit</h3>
                         <select className="input" id="unit" placeholder="Area Unit" value={areaUnit} onChange={(e) => setAreaUnit(e.target.value)}>
-                            <option> Area Unit</option>
+                            <option hidden value> Area Unit</option>
                             <option value="square meter">Sqaure Meter</option>
                             <option value="square foot">Square Foot</option>
                         </select>
@@ -161,7 +165,7 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                         <h3>No of Floors</h3>
                         <select className="input" id="floor" placeholder="Select No of Floor" value={floors} onChange={(e) => setFloors(e.target.value)}>
-                            <option> Select No of Floor</option>
+                            <option hidden value> Select No of Floor</option>
                             <option value="Ground" >Ground</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -173,21 +177,21 @@ const PropertyDetails = ({ user, data, setData }) => {
 
                         <h3>Western Toilet</h3>
                         <select className="input" id="toilet" placeholder="Select Western Toilet" value={western} onChange={(e) => setWestern(e.target.value)}>
-                            <option> Select Western Toilet</option>
+                            <option hidden value> Select Western Toilet</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
 
                         <h3>Car Parking</h3>
                         <select className="input" id="parking" placeholder="Select Car Parking" value={parking} onChange={(e) => setParking(e.target.value)}>
-                            <option> Select Car Parking</option>
+                            <option hidden value> Select Car Parking</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
 
                         <h3>Electricity</h3>
                         <select className="input" id="electricity" placeholder="Example: 3 Phase" value={electricity} onChange={(e) => setElectricity(e.target.value)}>
-                            <option> Example: 3 Phase</option>
+                            <option hidden value> Example: 3 Phase</option>
                             <option value="1 phase">1 Phase</option>
                             <option value="2 phase">2 Phase</option>
                             <option value="3 phase">3 Phase</option>
