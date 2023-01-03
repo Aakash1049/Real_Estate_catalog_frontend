@@ -26,8 +26,8 @@ export default function Signin()
                 alert(data.error)
             }
             else {
-                localStorage.setItem("jwt",data.token)
-                localStorage.setItem("user",JSON.stringify(data.user))
+               // localStorage.setItem("jwt",data.token)
+                //localStorage.setItem("user",JSON.stringify(data.user))
                 alert(data.message)
                 navigate("/Content")
             }
